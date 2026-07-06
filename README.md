@@ -39,15 +39,7 @@ The application focuses on privacy, simplicity, and a modern user experience whi
 
 ---
 
-## 📸 Screenshots
 
-> Add screenshots here
-
-| Home | Dashboard |
-|------|-----------|
-| ![](./screenshots/home.png) | ![](./screenshots/dashboard.png) |
-
----
 
 ## 🛠 Tech Stack
 
