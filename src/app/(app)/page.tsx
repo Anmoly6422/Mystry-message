@@ -7,6 +7,7 @@ import TornEdgeDivider from '@/components/TornEdgeDivider';
 import RedStringExhibits from '@/components/RedStringExhibits';
 import InfiniteMarquee from '@/components/InfiniteMarquee';
 import SenderPreviewMockup from '@/components/SenderPreviewMockup';
+import HowItWorksInteractive from '@/components/HowItWorksInteractive';
 import messages from '@/messages.json';
 
 export default function Home() {
@@ -102,69 +103,19 @@ export default function Home() {
 
         <div className="max-w-6xl mx-auto px-4 sm:px-8 pt-8">
           {/* Section Header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-10">
             <span className="font-mono text-xs uppercase tracking-wider text-[#A8332B] font-bold block mb-1">
-              Simple 3-Step Flow
+              Interactive 3-Step Walkthrough
             </span>
             <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#1C1A16] uppercase tracking-wide">
               How Mystery Messages Works
             </h2>
             <p className="font-sans text-base text-[#45566E] max-w-xl mx-auto mt-2">
-              Start receiving anonymous feedback in less than a minute.
+              Select or cycle through each step to preview how easy it is to receive anonymous messages.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* 3 Numbered Steps */}
-            <div className="lg:col-span-7 space-y-6">
-              <div className="flex items-start space-x-4 bg-[#EDE6D6] p-5 rounded-xs border border-[#C9B896] shadow-xs">
-                <div className="w-10 h-10 shrink-0 rounded-full bg-[#A8332B] text-[#EDE6D6] font-display font-bold text-lg flex items-center justify-center">
-                  1
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg text-[#1C1A16] mb-1 font-sans">
-                    Create your inbox
-                  </h3>
-                  <p className="text-sm text-[#45566E] font-sans leading-relaxed">
-                    Sign up in seconds and get your unique anonymous message link.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4 bg-[#EDE6D6] p-5 rounded-xs border border-[#C9B896] shadow-xs">
-                <div className="w-10 h-10 shrink-0 rounded-full bg-[#A8332B] text-[#EDE6D6] font-display font-bold text-lg flex items-center justify-center">
-                  2
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg text-[#1C1A16] mb-1 font-sans">
-                    Share your link
-                  </h3>
-                  <p className="text-sm text-[#45566E] font-sans leading-relaxed">
-                    Post your link on Instagram, Twitter, LinkedIn, or anywhere your audience is.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4 bg-[#EDE6D6] p-5 rounded-xs border border-[#C9B896] shadow-xs">
-                <div className="w-10 h-10 shrink-0 rounded-full bg-[#A8332B] text-[#EDE6D6] font-display font-bold text-lg flex items-center justify-center">
-                  3
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg text-[#1C1A16] mb-1 font-sans">
-                    Receive honest messages
-                  </h3>
-                  <p className="text-sm text-[#45566E] font-sans leading-relaxed">
-                    Read unvarnished, anonymous messages privately inside your personal dashboard.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Sender Interactive Mockup Preview */}
-            <div className="lg:col-span-5 flex justify-center">
-              <SenderPreviewMockup />
-            </div>
-          </div>
+          <HowItWorksInteractive />
         </div>
       </section>
 
