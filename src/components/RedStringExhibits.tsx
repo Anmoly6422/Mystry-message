@@ -26,26 +26,26 @@ export default function RedStringExhibits() {
 
   const exhibits = [
     {
-      tag: "EXHIBIT A",
-      title: "CLASSIFIED ANONYMITY",
-      fileNo: "EVD-2026-01",
-      desc: "Every statement filed is stripped of IP traces, browser signatures, and identity data before entering the dossier locker.",
-      stampText: "VERIFIED SECURE",
+      tag: "FEATURE 01",
+      title: "Absolute Anonymity",
+      fileNo: "FEAT-01",
+      desc: "Every message is stripped of IP traces, browser signatures, and sender identity data before reaching your inbox.",
+      stampText: "100% PRIVATE",
     },
     {
-      tag: "EXHIBIT B",
-      title: "ENCRYPTED EVIDENCE",
-      fileNo: "EVD-2026-02",
-      desc: "Messages are sealed inside immutable database lockers accessible solely by the recipient's secure security clearance key.",
-      stampText: "SEALED CASE",
+      tag: "FEATURE 02",
+      title: "Private Dashboard",
+      fileNo: "FEAT-02",
+      desc: "Messages arrive directly in your private dashboard, protected securely under your user account.",
+      stampText: "USER OWNED",
       offset: true, // vertically offset middle card
     },
     {
-      tag: "EXHIBIT C",
-      title: "AI SUGGESTION ENGINE",
-      fileNo: "EVD-2026-03",
-      desc: "Investigative prompt engine generates contextually rich witness questions when interrogation inspiration runs low.",
-      stampText: "ANALYSIS READY",
+      tag: "FEATURE 03",
+      title: "Smart Prompts",
+      fileNo: "FEAT-03",
+      desc: "Built-in AI suggestion engine gives senders engaging prompt ideas when writing feedback.",
+      stampText: "AI POWERED",
     },
   ];
 

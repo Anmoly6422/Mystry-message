@@ -79,24 +79,24 @@ const Page = () => {
       <Navbar />
 
       <main className="grow flex items-center justify-center p-4 py-12">
-        <div className="w-full max-w-md p-8 bg-[#EDE6D6] border-2 border-[#1C1A16] shadow-[10px_10px_0px_#1C1A16] relative">
-          <div className="absolute -top-4 left-6 bg-[#A8332B] text-[#EDE6D6] px-3 py-0.5 font-mono text-[11px] font-bold uppercase tracking-wider">
-            AGENT REGISTRATION PROTOCOL
+        <div className="w-full max-w-md p-8 bg-[#EDE6D6] border-2 border-[#1C1A16] shadow-[10px_10px_0px_#1C1A16] relative rounded-xs">
+          <div className="absolute -top-4 left-6 bg-[#A8332B] text-[#EDE6D6] px-3 py-0.5 font-mono text-[11px] font-bold uppercase tracking-wider rounded-xs">
+            CREATE ACCOUNT
           </div>
 
           <div className="text-center mb-8 border-b-2 border-dashed border-[#C9B896] pb-6">
             <span className="font-mono text-xs font-bold text-[#A8332B] uppercase tracking-widest block mb-1">
-              [ CREATE DOSSIER ]
+              Get Started Free
             </span>
-            <h1 className="font-display font-black text-3xl uppercase text-[#1C1A16] tracking-wide">
-              REGISTER AGENT KEY
+            <h1 className="font-display font-extrabold text-3xl uppercase text-[#1C1A16] tracking-wide">
+              Create Your Inbox Link
             </h1>
-            <p className="font-serif text-xs text-[#45566E] mt-2">
-              Establish your clearance credentials to receive confidential witness statements.
+            <p className="font-sans text-xs text-[#45566E] mt-2">
+              Set up your username to start receiving honest, anonymous messages.
             </p>
           </div>
 
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
             {/* Username Controller */}
             <Controller
               name="username"
@@ -104,14 +104,14 @@ const Page = () => {
               render={({ field, fieldState }) => (
                 <div className="space-y-1">
                   <label htmlFor="username" className="block font-mono text-xs font-bold uppercase text-[#1C1A16]">
-                    DESIRED AGENT USERNAME:
+                    Username (Your Profile Handle)
                   </label>
 
                   <input
                     {...field}
                     id="username"
-                    placeholder="agent_codename"
-                    className="w-full bg-[#E3D9C2] border-2 border-[#1C1A16] p-3 font-mono text-sm text-[#1C1A16] focus:outline-none focus:border-[#A8332B]"
+                    placeholder="e.g. alex_rivera"
+                    className="w-full bg-[#E3D9C2] border-2 border-[#1C1A16] p-3 font-mono text-sm text-[#1C1A16] focus:outline-hidden focus:border-[#A8332B] rounded-xs"
                     onChange={(e) => {
                       field.onChange(e);
                       setusername(e.target.value);
@@ -120,7 +120,7 @@ const Page = () => {
 
                   {isCheckingUsername && (
                     <p className="font-mono text-xs text-[#45566E] animate-pulse">
-                      Checking handle availability...
+                      Checking availability...
                     </p>
                   )}
 
@@ -153,15 +153,15 @@ const Page = () => {
               render={({ field, fieldState }) => (
                 <div className="space-y-1">
                   <label htmlFor="email" className="block font-mono text-xs font-bold uppercase text-[#1C1A16]">
-                    OFFICIAL EMAIL ADDRESS:
+                    Email Address
                   </label>
 
                   <input
                     {...field}
                     id="email"
                     type="email"
-                    placeholder="agent@agency.org"
-                    className="w-full bg-[#E3D9C2] border-2 border-[#1C1A16] p-3 font-mono text-sm text-[#1C1A16] focus:outline-none focus:border-[#A8332B]"
+                    placeholder="yourname@example.com"
+                    className="w-full bg-[#E3D9C2] border-2 border-[#1C1A16] p-3 font-mono text-sm text-[#1C1A16] focus:outline-hidden focus:border-[#A8332B] rounded-xs"
                   />
 
                   {fieldState.error && (
@@ -180,7 +180,7 @@ const Page = () => {
               render={({ field, fieldState }) => (
                 <div className="space-y-1">
                   <label htmlFor="password" className="block font-mono text-xs font-bold uppercase text-[#1C1A16]">
-                    SECURITY PASSPHRASE:
+                    Password
                   </label>
 
                   <div className="relative">
@@ -189,7 +189,7 @@ const Page = () => {
                       id="password"
                       type={showPassword ? "text" : "password"}
                       placeholder="••••••••••••"
-                      className="w-full bg-[#E3D9C2] border-2 border-[#1C1A16] p-3 pr-10 font-mono text-sm text-[#1C1A16] focus:outline-none focus:border-[#A8332B]"
+                      className="w-full bg-[#E3D9C2] border-2 border-[#1C1A16] p-3 pr-10 font-mono text-sm text-[#1C1A16] focus:outline-hidden focus:border-[#A8332B] rounded-xs"
                     />
 
                     <button
@@ -213,24 +213,24 @@ const Page = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full stamp-filled py-4 text-lg font-bold uppercase transition-transform active:scale-95 cursor-pointer shadow-md tracking-widest hover:bg-[#0B0B0A] disabled:opacity-60"
+              className="stamp-filled w-full py-3.5 text-base font-bold uppercase transition-all hover:bg-[#0B0B0A] hover:-rotate-1 active:scale-95 cursor-pointer shadow-md tracking-wider disabled:opacity-60"
             >
               {isSubmitting ? (
                 <span className="flex items-center justify-center space-x-2">
                   <Loader2 className="animate-spin h-5 w-5" />
-                  <span>INITIALIZING DOSSIER...</span>
+                  <span>Creating Account...</span>
                 </span>
               ) : (
-                "REGISTER & GENERATE DOSSIER"
+                "Get Your Link"
               )}
             </button>
           </form>
 
-          <div className="text-center mt-8 pt-4 border-t border-[#C9B896] font-mono text-xs text-[#45566E]">
+          <div className="text-center mt-8 pt-4 border-t border-[#C9B896] font-sans text-xs text-[#45566E]">
             <p>
-              ALREADY HAVE CLEARANCE?{" "}
+              Already have an account?{" "}
               <Link href="/sign-in" className="text-[#A8332B] font-bold underline hover:text-[#0B0B0A]">
-                AGENT LOGIN
+                Login here
               </Link>
             </p>
           </div>
@@ -238,7 +238,7 @@ const Page = () => {
       </main>
 
       <footer className="bg-[#0B0B0A] text-[#EDE6D6] py-4 text-center font-mono text-xs border-t-2 border-[#A8332B]">
-        MYSTERY_MESSAGES AGENT REGISTRATION REGISTRY
+        Mystery Messages — Portfolio project built by Anmol Yadav.
       </footer>
     </div>
   );

@@ -6,8 +6,8 @@ import DustParticles from "@/components/DustParticles";
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Mystery_Messages — Classified Case File & Anonymous Feedback",
-  description: "Investigate, file, and analyze confidential witness statements with complete anonymity.",
+  title: "Mystery Messages — Anonymous Feedback & Inboxes",
+  description: "Get honest, anonymous messages from friends, coworkers, or followers. Built by Anmol Yadav.",
 };
 
 export default function RootLayout({
